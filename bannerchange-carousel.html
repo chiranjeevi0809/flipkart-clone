@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .loginbtn{
+            margin-left: 1200px;
+        }
+        form{
+            height: 250px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+   
+    <div class="loginbtn">
+        <button class="btn btn-primary mt-3">HOME<a href="https://www.flipkart.com/travel/flights?param=TraTrTravel_DT-RHS_AW_NEW-2-Dom-1299&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InNvdXJjZUNvbnRlbnRUeXBlIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6InNvdXJjZUNvbnRlbnRUeXBlIiwiaW5mZXJlbmNlVHlwZSI6IlNDVCIsInZhbHVlIjoiSUFEIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fX19fQ%3D%3D&nnc=EBNTFPM8P0AU_IAD">f</a></button>
+    <button  data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary mt-3">Login</button>
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="bi bi-person-fill">User Login</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>password</dt>
+                        <dd><input type="password" class="form-control"></dd>
+                        <dt>mobile</dt>
+                        <dd><input type="number" class="form-control"></dd>
+                        <dt>city Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>state Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>pincode</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                       
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    </button>
+    
+    <div class="carousel slide mt-4" id="banners" data-bs-ride="carousel" data-bs-theme="dark">
+        <div class="carousel-inner">
+            <div class="carousel-item active"  data-bs-interval="3000">
+                <img src="public/images/slider1.jpg" height="250" width="100%">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="public/images/slider2.jpg" height="250" width="100%" >
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <form class="d-flex justify-content-center align align-items-center">
+                    <div class="input-group w-50">
+                        <input type="email" placeholder="your email address to register" class="form-control">
+                        <button class="btn btn-danger">Get start<span class="bi bi-chevron-right"></span></button>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="public/images/slider3.jpg" height="250" width="100%">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="public/images/slider4.jpg" height="250" width="100%">
+
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#banners" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#banners" data-bs-slide="next">
+            <span class="carousel-control-next-icon">
+            </span>
+        </button>
+        <div class="carousel-indicators">
+            <button class=" active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="3" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="4" data-bs-target="#banners"></button>
+
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <button data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary mt-5">Login</button>
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="bi bi-person-fill">User Login</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>password</dt>
+                        <dd><input type="password" class="form-control"></dd>
+                        <dt>mobile</dt>
+                        <dd><input type="number" class="form-control"></dd>
+                        <dt>city Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>state Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>pincode</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                       
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    </button>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

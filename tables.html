@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables</title>
+    <style>
+        table{
+            font-family: arial;
+            
+          
+           
+        }
+        
+        caption{
+            font-size: 30px;
+            color: aquamarine;
+            font-family: arial;
+            background-color: black;
+            margin-bottom: 20px;
+        }
+        tbody tr:first-child{
+            font-weight: bold;
+            font-size: 30px;
+            margin:20px;
+             
+        }
+        tfoot{
+            color:gray;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <table  rules="all" frame="box" cellspacing="10" cellpadding="5" >
+        <caption>FRUITS</caption>
+        <tbody>
+            
+            <tr>
+                <th width="150"> mango</th>
+                <th width="160">orange</th>
+                <th width="100">apple</th>
+                <th width="180">grapes</th>
+            </tr>
+            <tr>
+                <td>2546</td>
+                <td>7654</td>
+                <td>2856</td>
+                <td>8456</td>
+
+            </tr>
+            <tr>
+                <td>green</td>
+                <td>yellow</td>
+                <td>orange</td>
+                <td>green</td>
+
+            </tr>
+            <tr>
+                <td>green</td>
+                <td>black</td>
+                <td>white</td>
+                <td>pink</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">all above available</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>

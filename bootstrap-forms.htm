@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap forms</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        section{
+            height: 500px;
+        }
+        
+    </style>
+</head>
+<body class="container-fluid">
+    <section class="d-flex justify-content-center align-items-center">
+        <form class="border border-4 border-dark p-4 rounded rounded-4">
+            <h3 class="bi bi-person-fill text-warning " > Register User </h3>
+            <div class="mb-4">
+                <label class="form-label"  required for="User Name" >User Name </label>
+                <div>
+                    <input type="text" placeholder="Your Name" class="form-control" name="User Name">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="Password">Password</label>
+                <div>
+                    <input type="password" placeholder="Password" class="form-control" name="Password">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="form-label text-success" for="city">Your City</label>
+                <div>
+                    <select class="form-select text-primary" name="city">
+                        <option>Select City</option>
+                        <option>Vishakapatnam</option>
+                        <option>Annakapalli</option>
+                        <option>Narsipatnam</option>
+                        <option>Vijawada</option>
+                        <option>Tuni</option>
+                        <option>Vijanagaram</option>
+                        <option>Kadapa</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-switch">
+               <input type="checkbox" checked class="form-check-input">
+               <label class="form-check-label btn btn-primary btn btn-sm">submit</label>
+                
+            </div>
+        </form>
+    </section>
+    
+</body>
+</html>

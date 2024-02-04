@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Design</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header
+        {
+            font-size: 21px;
+            font-family: Arial;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        .brand-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header span{
+            margin-right: 25px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            padding: 15px;
+            text-align: center;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .bi-lightning-fill {
+            color: goldenrod;
+        }
+        section {
+            height: 100px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            font-family: Arial;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 100px;
+            padding-bottom: 20px;
+        }
+        .footer-title {
+            font-size: 25px;
+            text-align: center;
+        }
+        .subscribe-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .email {
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            background-color: gray;
+            text-align: left;
+            margin-right: 10px;
+        }
+        .subscribe {
+            display: inline-block;
+            width: 120px;
+            padding: 20px;
+            background-color: gray;
+            color:white;
+        }
+        .services-container {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        }
+        .service-title {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .service-title~span {
+            display: block;
+            margin-bottom: 15px;
+        }
+        .footer-brand-title {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+        aside span {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+               <span>Home</span>
+               <span>Catalog</span>
+               <span>Shop</span>
+               <span>Pages</span>
+               <span>Blog</span>
+               <span>Docs</span>
+           </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+    <section>
+
+    </section>
+    <footer>
+        <div class="footer-title">Want style Ideas and Treats?</div>
+        <div class="subscribe-container">
+            <span class="email"> Enter Email * </span>
+            <span class="subscribe"> Subscribe </span>
+        </div>
+        <div class="services-container">
+            <div>
+                <span class="footer-brand-title">Shopper.</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div>
+                <span class="service-title">SUPPORT</span>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div>
+                <span class="service-title">SHOP</span>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div>
+               <span class="service-title"> COMPANY</span>
+                <span>Our Story</span>
+                <span>Careers</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <span class="service-title">CONTACT</span>
+                <span>1-202-555-0105</span>
+                <span>1-202-555-0106</span>
+                <span>help@shopper.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

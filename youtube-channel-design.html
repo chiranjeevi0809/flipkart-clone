@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube channel</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+       .bi-justify{
+        font-size: 23px;
+       }
+       header{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 30px;
+       }
+       .search-bar{
+        width: 300px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding: 5px;
+         
+       }
+       .bi-search{
+       margin-left: 210px;
+       }
+       .bi-mic{
+        background-color: rgb(231, 230, 230);
+        border-radius: 20px;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+
+       }
+       .bi-camera-video,.bi-bell{
+        margin:10px;
+       }
+       .profilpic{
+        border-radius: 20px;
+       }
+       section{
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+       }
+       .nav-bar{
+        margin-right: 20px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+
+       }
+       article{
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        margin-top: 20px;
+        font-family: arial;
+
+        
+       }
+       .article-title{
+        font-size: 35px;
+        font-weight: bold;
+       }
+       .article-subtitle{
+        margin-top: 10px;
+        color:gray;
+        margin-bottom: 10px;
+       }
+       .subscribe-btn{
+        background-color: black;
+        color:wheat;
+        width: 90px;
+        padding:10px;
+        border-radius: 10px;
+       }
+       
+       .channel-navigation span{
+        margin-right: 30px;
+        padding-bottom: 20px;
+        
+       }
+       .channel-navigation{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid gray;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 20px ;
+        color: gray;
+       }
+       .channel-navigation span:first-child{
+        color: black;
+       }
+       main{
+        height: px;
+        overflow: auto;
+       }
+       for-you-videos{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    
+       }
+      
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="bi bi-justify"></span>
+            <img src="public/images/youtube1.jpg" width="80px">
+
+        </div>
+        <div class="search-container">
+          <span class="search-bar">search<span class="search-button"><span class="bi bi-search"></span></span></span>
+          <span class="bi bi-mic"></span>
+          </div>
+        
+        <div>
+            <span class="bi bi-camera-video"></span>
+            <span class="bi bi-bell"></span>
+            <img class="profilpic" src="public/images/ishani.jpg" width="20" height="20">
+
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="nav-bar">
+                <span class="bi bi-house"></span>
+                <span>HOME</span>
+            </div>
+            <div class="nav-bar">
+                <span class="bi bi-shop-window"></span>
+                <span>SHORTS</span>
+            </div>
+            <div class="nav-bar">
+                <span class="bi bi-substack"></span>
+                <span>SUBSCRIPTION</span>
+            </div>
+
+        </nav>
+        <main>
+            <img src="public/images/youtube-banner.jpg" width="100%">
+      
+        <article >
+            <div >
+                <img src="public/images/nit-logo.jpg" width="90%">
+            </div>
+            <div>
+            <div class="article-title">Naresh i Technologies</div>
+                <div class="article-subtitle"> ‧ 1.23M subscribers ‧ 2.9K videos</div>
+                <div>We are one of the software training organization With a library of 200+ courses, we have he...</div><br>
+                <div><a href="https://www.instagram.com/?hl=en">https://www.instagram.com/?hl=en</a></div><br>
+                <div class="subscribe-btn">
+                    <span>subscribe</span>
+                </div>
+            </div>
+            </div>
+        </article>
+        <div class="channel-navigation">
+            <span>HOME</span>
+            <span>VIDEO</span>
+            <span>SHORTS</span>
+            <span>LIVE</span>
+            <span>PLAYLIST</span>
+            <span>community</span> <span class="bi bi-search"></span>
+        </div>
+        <div class="d-flex">
+            <div>
+                <iframe src="https://www.youtube.com/embed/si-KFFOW2gw"></iframe>
+            </div>
+            <div>
+                <iframe src="https://www.youtube.com/embed/gPFLWhm3UKY"></iframe>
+
+            </div>
+            <div>
+                <iframe src="https://www.youtube.com/embed/si-KFFOW2gw"></iframe>
+            </div>
+            <div>
+                <iframe src="https://www.youtube.com/embed/lSorhgHHuV4"></iframe>
+            </div>
+
+        </div>
+        </main>
+    </section>
+
+    
+</body>
+</html>

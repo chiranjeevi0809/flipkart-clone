@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:required+span{
+            display:inline;
+            color: brown;
+
+
+        }
+    </style>
+</head>
+<body>
+    <form>
+       <fieldset>
+        <legend>Regester User</legend>
+        <dl>
+            <dt>User Id</dt>
+            <dd><input type="text" placeholder="Block letters only" name="user"></dd>
+            <dt>Mobile</dt>
+            <dd><input type="text"  required name="mobile" value="+91" autofocus><span>*</span></dd>
+            <dt>Country</dt>
+            <dd><input type="text" name="country" value="INDIA" disabled></dd>
+        </dl>
+        <button>submit</button>
+       </fieldset>
+    </form>
+    <form>
+        <fieldset>
+         <legend>Regester User</legend>
+         <dl>
+             <dt>User Id</dt>
+             <dd><input type="text" minlength="4" maxlength="15"></dd>
+             <dt>Mobile</dt>
+             <dd><input type="text"  name="mobile" value="+91" autofocus></dd>
+             <dt>Country</dt>
+             <dd><input type="text" name="country" value="INDIA" disabled></dd>
+         </dl>
+         <button>submit</button>
+        </fieldset>
+     </form>
+</body>
+</html>

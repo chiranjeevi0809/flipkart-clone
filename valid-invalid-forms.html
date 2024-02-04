@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .username:valid+div{
+            display: none;
+        }
+        .username:invalid+div{
+            display: block;
+            color: red;
+        }
+        .password:valid+div{
+            display: none;
+        }
+        .password:invalid+div{
+            display: block;
+            color: red;
+        }
+        .mobile:valid+div{
+            display: none;
+        }
+        .mobile:invalid+div{
+            display: block;
+            color: red;
+        }
+        div{
+           background-color:grey;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    
+        <form class="align-items-center justify-content-center d-flex mt-5 ">
+           
+            <div class="border border-1 border-warning m-4 p-4 w-25  rounded rounded-3">
+                <h3 class="bi bi-person-fill">User Registration</h3>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" required class="username"><div>User Name Required</div></dd>
+                <dt>Mobile</dt>
+                <dd><input type="text" pattern="\+91\d{10}" class="mobile" autofocus>
+                <div>invalid mobile: +91 & 10 digits</div></dd>
+                <dt>Password</dt>
+                <dd><input type="password" class="password" pattern="(?=.*[A-Z])\w{4,10}"><div>password 4 to 10 chars atleast  one upper case letter requid</div></dd>
+            </dl>
+            <button class="btn btn-primary">submit</button>
+        </div>
+        </form>
+        
+   
+   
+</body>
+</html>
