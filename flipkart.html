@@ -6,6 +6,19 @@
     <title>flipkart clone</title>
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .card{
+            width: 200px;
+            
+        }
+        .card img{
+            height: 200px;
+        }
+        ul{
+            list-style: none;
+        }
+       
+    </style>
 </head>
 <body class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-light mt-4">
@@ -33,6 +46,9 @@
         <span class="bi bi-justify"></span>
         
     </nav>
+    <div>
+        <img src="public/images/flipkartcardsbar.jpg" height="100" width="100%">
+    </div>
     <div class="carousel slide mt-4" id="banners" data-bs-ride="carousel" data-bs-theme="dark">
         <div class="carousel-inner">
             <div class="carousel-item active"  data-bs-interval="3000">
@@ -50,7 +66,7 @@
                 <img src="public/images/slider4.jpg" height="250" width="100%">
 
             </div>
-            <div class="carousel-item" data-bs-interval="6000">
+            <div class="carousel-item" data-bs-interval="2000">
                 <img src="public/images/flipkartscroll.jpg" height="250" width="100%">
 
             </div>
@@ -72,7 +88,84 @@
             <button data-bs-slide-to="4" data-bs-target="#banners"></button>
 
         </div>
+        
     </div>
+    <h2 class="text-secondary mt-3" >Top Deals</h2>
+    <main class="mt-4 d-flex">
+        <div class="card p-2 m-2 me-4 ">
+            <img src="public/images/IPHONE14.jpg " class="card-img-top">
+            <div class="card-header">
+                <h5 class="card-title text-warning">iphone 14</h5>
+                <p class="card-subtitle">price 65,999</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="text-primary">Green color</li>
+                    <li>128 gb </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="card p-2 m-2 me-4">
+            <img src="public/images/iphone14red.jpg " class="card-img-top">
+            <div class="card-header">
+                <h5 class="card-title text-primary">iphone 13</h5>
+                <p class="card-subtitle">price 65,799</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="text-danger">red color</li>
+                    <li>128 gb </li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="card p-2 m-2 me-4">
+            <img src="public/images/women-shopping.jpeg" class="card-img-top">
+            <div class="card-header">
+                <h5 class="card-title text-secondary">women fashion</h5>
+                <p class="card-subtitle">price 566</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="text-info">checks</li>
+                    <li><b>white </b></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="card p-2 m-2 me-4">
+            <img src="public/images/a1.jpg" class="card-img-top">
+            <div class="card-header">
+                <h5 class="card-title text-secondary">republic day</h5>
+                <p class="card-subtitle">price 566</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="text-info">checks</li>
+                    <li><b>blue</b> </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="card p-2 m-2 ">
+            <img src="public/images/at1.jpg" class="card-img-top">
+            <div class="card-header">
+                <h5 class="card-title text-secondary">Television</h5>
+                <p class="card-subtitle">price 566</p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="text-info">checks</li>
+                    <li><b>red</b> </li>
+                </ul>
+            </div>
+            
+        </div>
+    </main>
+        
+    
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     
