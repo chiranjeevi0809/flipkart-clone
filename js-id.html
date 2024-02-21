@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+     function onloadbody(){
+        document.getElementById("pic").src="public/images/a3.jpg";
+        document.getElementById("btnregister").value="Register";
+        document.getElementById("btnlogin").value="Login"
+        }
+
+    </script>
+</head>
+<body onload="onloadbody()">
+    <div>
+        <img id="pic" width="150px" height="150px" border="1">
+    </div>
+    <div>
+        <form>
+            <h2>Register</h2>
+            User Name: <input id="txtName" type="text"> <input id="btnregister" type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            Mobile: <input id="txtmobile" type="text"> <input id="btnlogin" type="button">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function fontWeight(){
+            var btn = document.getElementById("btnBold").value;
+            document.querySelector("p").style.fontWeight="bold";
+        }
+
+        function textAlign(){
+            var center = document.getElementById("btnCenter").value;
+            document.querySelector("p").style.textAlign = "center";
+        }
+
+        function colorChange(){
+            var color = document.getElementById("txtColor").value;
+            document.querySelector("p").innerHTML = "sample text".fontcolor(color);
+            
+        }
+        
+       function sizeChange(){
+            var number = document.getElementById("num").value;
+            document.querySelector("p").innerHTML = "sample text".fontsize(number);
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="m-5 p-3">
+        <button class="bi bi-type-bold" id="btnBold" onclick="fontWeight()"></button>
+        <button class="bi bi-text-center" id="btnCenter" onclick="textAlign()"></button>
+        font<input type="number" id="num" onchange="sizeChange()" min="1" max="7" value="1">size
+        <input type="color" id="txtColor" onchange="colorChange()">
+    </div>
+    <div class="container">
+        <p>Sample Text</p>
+
+    </div>
+</body>
+</html>

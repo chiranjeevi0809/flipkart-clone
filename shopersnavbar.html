@@ -189,9 +189,27 @@
                 background-color: gray;
                 color: white;
             }
+            #count{
+                background-color: blueviolet;
+            padding: 1px;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            }
     </style>
+    <script>
+        c = 0;
+        function addclick(){
+            c++;
+            document.querySelector("#count").innerHTML="<b>" + c + "</b>";
+        }
+
+    </script>
 </head>
-<body>
+<body >
     <header>
         <div>
             <span class="brand-title">shopers.</span>
@@ -210,7 +228,7 @@
             <span class="bi bi-search"> </span>
             <span class="bi bi-person"></span>
             <span class="bi bi-heart"></span>
-            <span class="bi bi-cart"></span>
+            <span class="bi bi-cart"><span id="count"></span></span>
         </div>
         </header>
             <article>
@@ -220,17 +238,17 @@
             </article> 
         <section>
             <main>
-            <div class="img1">
+            <div class="img1" onclick="addclick()">
                 <div class="women-title">WOMEN</div>
                 <div class="shop-women"><span>Shop Women <span class="bi bi-arrow-right"></span></span></div>
 
             </div>
-            <div class="img2">
+            <div class="img2" onclick="addclick()">
                 <div class="men-title">MEN</div>
                 <div class="shop-men"><span>Shop Men<span class="bi bi-arrow-right"></span></span></div>
 
             </div>
-            <div class="img3">
+            <div class="img3" onclick="addclick()">
                 <div class="kids-title">KIDS</div>
                 <div class="shop-kids"><span>Shop Kids<span class="bi bi-arrow-right"></span></span>
 

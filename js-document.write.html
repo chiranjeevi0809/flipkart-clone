@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function payclick(){
+            flag=confirm("payment success\nbill will sent to mail\namount=500");
+            if(flag==true){
+                document.write("<font face='arial' color='red' size='6'> <b>payment completed..</b></font> ");
+            }
+            else{
+                document.write("payment cancled.. <br><a href='js-document.write.html'>try again</a>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="payclick()">pay</button>
+
+</body>
+</html>

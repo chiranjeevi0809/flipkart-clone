@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        c = 0;
+        function addclick(){
+            c++;
+            document.querySelector("#count").innerHTML="<b>" + c + "</b>";
+        }
+
+    </script>
+    <style>
+        #count{
+            background-color: blueviolet;
+            padding: 1px;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+        <button onclick="addclick()" class="bi bi-cart2  mt-5 ms-5"> Add to cart</button>
+        <div style="position: fixed; top:30px; right: 50px;">
+            <span class="bi bi-cart4"><span id="count"></span></span>
+
+        </div>
+
+    
+</body>
+</html>

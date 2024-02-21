@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOX</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bookclick(){
+            document.getElementById("summarycontainer").style.display="block";
+            document.getElementById("btnquickbooking").style.display="none";
+
+            document.getElementById("lblmovies").innerHTML=document.getElementById("lstmovies").value;
+            document.getElementById("lblcinema").innerHTML=document.getElementById("lstcinema").value;
+            document.getElementById("lbltime").innerHTML=document.getElementById("lsttime").value;
+            document.getElementById("lbldate").innerHTML=document.getElementById("lstdate").value;
+            document.getElementById("lblseats").innerHTML=document.getElementById("lstseats").value;
+            moviename=document.getElementById("lstmovies").value;
+            if(moviename=="hanuman"){
+                document.getElementById("imgposters").src="public/images/hanuman.jpg";
+            }
+            else {
+                document.getElementById("imgposters").src="public/images/bhairavakona.jpg";
+            }
+        }
+        function modifyclick(){
+            document.getElementById("btnbook").innerHTML="update";
+        }
+
+    </script>
+</head>
+<body class="container-fluid">
+    <button id="btnquickbooking" class="btn btn-danger mt-3" data-bs-target="#booking" data-bs-toggle="modal">Quick Booking</button>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Quick Booking-Cinema</h2>
+                    <button class="btn btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <nav class="d-flex justify-content-around bg-light m-2 p-2">
+                        <div>
+                            <select id="lstmovies" class="form-select">
+                                <option>select movies</option>
+                                <option>eagle</option>
+                                <option>hanuman</option>
+                                <option>bhairavakona</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstcinema" class="form-select">
+                                <option>select cenima</option>
+                                <option>amr</option>
+                                <option>inox ameerpat</option>
+                                <option>secundrabad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lsttime" class="form-select">
+                                <option>select time</option>
+                                <option>10 am</option>
+                                <option>12.30pm</option>
+                                <option>3.30 pm</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstdate" class="form-select">
+                                <option>select date</option>
+                                <option>today,feb 15</option>
+                                <option>tomrrow,feb 16</option>
+                                <option>feb 17</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstseats" class="form-select">
+                                <option>select seats</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div>
+                        <button onclick="bookclick()" id="btnbook" data-bs-dismiss="modal" class="btn btn-secondary">Book</button>
+                    </div>
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="w-50" style="display: none"; id="summarycontainer">
+        
+            <h3>Booking summary</h3>
+            <div class="row">
+                <div class="col">
+                    <img width="50%" height="200px" id="imgposters">
+
+                </div>
+               <div class="col">
+                <dl>
+                    <dt>movies</dt>
+                    <dd id="lblmovies"></dd>
+                    <dt>cinema</dt>
+                    <dd id="lblcinema"></dd>
+                    <dt>time</dt>
+                    <dd id="lbltime"></dd>
+                    <dt>date</dt>
+                    <dd id="lbldate"></dd>
+                    <dt>seats</dt>
+                    <dd id="lblseats"></dd> 
+                </dl>
+               </div>
+               <button class="btn btn-link" onclick="modifyclick()" data-bs-target="#booking" data-bs-toggle="modal" >modify booking</button>
+            </div>
+           
+       
+
+    </div>
+    
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

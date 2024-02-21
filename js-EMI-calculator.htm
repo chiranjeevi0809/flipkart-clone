@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AmountChange(){
+            document.getElementById("txtAmount").value = document.getElementById("rangeAmount").value;
+        }
+        function YearsChange(){
+            document.getElementById("txtYears").value = document.getElementById("rangeYears").value;
+        }
+        function RateChange(){
+            document.getElementById("txtRate").value = document.getElementById("rangeRate").value;
+        }
+
+        function CalculateClick(){
+            var P = parseInt(document.getElementById("txtAmount").value);
+            var r = parseFloat(document.getElementById("txtRate").value)/12/100;
+            var n = parseInt(document.getElementById("txtYears").value)*12;
+
+            var EMI = P * r * Math.pow(1+r,n) / Math.pow(1+r,n) - 1;
+
+            document.getElementById("lblResult").innerHTML = "Your Monthy Installment is <span class='h3 text-primary'>" + Math.round(EMI).toLocaleString("en-in",{style:"currency", currency:"INR"}) + " </span> For next " + n + " Months";
+
+        }
+    </script>
+</head>
+<body class="container-fluid bg-secondary">
+    <h1 class="mt-4 text-warning text-center bg-danger">
+        Personal Loan EMI Calculator
+    </h1>
+    <div class="mt-4 bg-dark-subtle text-dark p-3">
+        <div class="row mt-4">
+            <div class="col">
+                Amount You Need &#8377;<input type="text" class="bg-info" id="txtAmount"  size="20">
+
+            </div>
+            <div class="col">
+                For<input type="text" id="txtYears"  class="bg-warning" size="4">Years
+
+            </div>
+            <div class="col">
+                Intrest Rate<input type="text" id="txtRate" class="bg-success " size="4">%
+
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+            &#8377;1,00,000 <input type="range"  onchange="AmountChange()" id="rangeAmount" value="100000" min="100000" max="1000000"> &#8377; 10,00,000
+        </div>
+            <div class="col">
+                1<input type="range" min="1" onchange="YearsChange()" id="rangeYears" value="5" max="5">5
+            </div>
+            <div class="col">
+                Interst Rate<input type="range"  onchange="RateChange()" id="rangeRate" value="6.25" min="6.25" max="16.25" step="0.01">16.25
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col text-end">
+                <button class="btn btn-primary" onclick="CalculateClick()">Calculate</button>
+    
+            </div>
+    </div>
+    <p class="text-center" id="lblResult"></p>
+</div>
+    
+</body>
+</html>

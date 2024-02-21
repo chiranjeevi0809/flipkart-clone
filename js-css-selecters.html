@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bodyonload(){
+            document.querySelector("img").src="public/images/a4.jpg";
+            document.querySelector("#btnregister").value="Register";
+            document.querySelector(".btnlogin").value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyonload()">
+    <div>
+        <img  width="150px" height="150px" border="1">
+    </div>
+    <div>
+        <form>
+            <h2>Register</h2>
+            User Name: <input type="text"> <input id="btnregister" type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            Mobile: <input type="text"> <input class="btnlogin" type="button">
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOX</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bookclick(){
+
+            document.getElementById("summarycontainer").style.display="block";
+            document.getElementById("btnquickbooking").style.display="none";
+            
+
+            document.getElementById("lblmovies").innerHTML=document.getElementById("lstmovies").value;
+            document.getElementById("lblcinema").innerHTML=document.getElementById("lstcinema").value;
+            document.getElementById("lbltime").innerHTML=document.getElementById("lsttime").value;
+            document.getElementById("lbldate").innerHTML=document.getElementById("lstdate").value;
+            document.getElementById("lblseats").innerHTML=document.getElementById("lstseats").value;
+            moviename=document.getElementById("lstmovies").value;
+            if(moviename=="eagle"){
+                document.getElementById("imgposters").src="public/images/eagle.jpg";
+            }
+            else {
+                document.getElementById("imgposters").src="public/images/bhairavakona.jpg";
+            }
+        }
+        function modifyclick(){
+            document.getElementById("btnbook").innerHTML="update";
+        }
+
+    </script>
+    <style>
+        body{
+           // background-image: url(public/images/Netflix-background.jpg);
+            
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark mt-4 rounded rounded-4 mb-5">
+        <div class="container-fluid">
+            <button data-bs-toggle="collapse" data-bs-target="#navitems" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h2 class="navbar-brand">INOX</h2>
+            <div class="navbar-collapse collapse" id="navitems">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link">home</a></li>
+                    <li class="nav-item"><a class="nav-link">about</a></li>
+                    <li class="nav-item"><a class="nav-link">shop</a></li>
+                    <li class="nav-item"><a class="nav-link">blog</a></li>
+                    <li class="nav-item"><a class="nav-link">contact</a></li>
+                    <li class="nav-item">
+                        <div class="input-group ms-4">
+                            <input type="text"  placeholder="search flipkart.com" class="form-control ">
+                            <button class="bi bi-search btn btn-warning me-4"></button>
+                        </div>
+                    </li>
+                    <div class="dropdown ms-3">
+                        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" ><span class="bi bi-person-fill me-2"></span>Login</button>
+                        <ul class="dropdown-menu bg-light">
+                            <li class="dropdown-item"><span class="dropdown-item-text"></span> New user<span class="bi bi-question ms-2"></span></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-person-circle me-2" ></span>my profile</span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-feather m-2"></span>flipkart plus zone </span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-box me-2"></span>orders</span></li>
+                
+                        </ul>
+                    </div>
+                    <div class="buy">
+                        <button class="btn btn-warning ms-5">Buy</button>
+                    </div>
+                    <div>
+                        <button class=" btn btn-success bi bi-cart4 position-relative ms-3 ">
+                            <span class="badge bg-primary position-absolute rounded rounded-circle">5</span>
+                    
+                        </button>
+                    </div>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+    <div class="carousel slide mt-4" id="banners" data-bs-ride="carousel" data-bs-theme="dark">
+        <div class="carousel-inner">
+            <div class="carousel-item active"  data-bs-interval="3000">
+                <img src="public/images/inoxb1.jpg" height="250" width="100%">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="public/images/inoxb2.jpg" height="250" width="100%" >
+            </div>
+           
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="public/images/inoxb3.jpg" height="250" width="100%">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="public/images/inoxb4.jpg" height="250" width="100%">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="public/images/inoxb5.jpg" height="250" width="100%">
+
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#banners" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#banners" data-bs-slide="next">
+            <span class="carousel-control-next-icon">
+            </span>
+        </button>
+        <div class="carousel-indicators">
+            <button class=" active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="3" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="4" data-bs-target="#banners"></button>
+
+        </div>
+    </div>
+    <button class="btn btn-danger mt-3" id="btnquickbooking" data-bs-target="#booking" data-bs-toggle="modal">Quick Booking</button>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Quick Booking-Cinema</h2>
+                    <button class="btn btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <nav class="d-flex justify-content-around bg-light m-2 p-2">
+                        <div>
+                            <select id="lstmovies" class="form-select">
+                                <option>select movies</option>
+                                <option>eagle</option>
+                                <option>hanuman</option>
+                                <option>bhairavakona</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstcinema" class="form-select">
+                                <option>select cenima</option>
+                                <option>amr</option>
+                                <option>inox ameerpat</option>
+                                <option>secundrabad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lsttime" class="form-select">
+                                <option>select time</option>
+                                <option>10 am</option>
+                                <option>12.30pm</option>
+                                <option>3.30 pm</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstdate" class="form-select">
+                                <option>select date</option>
+                                <option>today,feb 15</option>
+                                <option>tomrrow,feb 16</option>
+                                <option>feb 17</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="lstseats" class="form-select">
+                                <option>select seats</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div>
+                        <button onclick="bookclick()" id="btnbook"  data-bs-dismiss="modal" class="btn btn-secondary">Book</button>
+                    </div>
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="w-50" style="display: none;" id="summarycontainer">
+        
+            <h3>Booking summary</h3>
+            <div class="row">
+                <div class="col">
+            <img width="50%" height="200px" id="imgposters"></div>
+            <div class="col">
+                <dl>
+            
+            <dt>movies</dt>
+            <dd id="lblmovies"></dd>
+            <dt>cinema</dt>
+            <dd id="lblcinema"></dd>
+            <dt>time</dt>
+            <dd id="lbltime"></dd>
+            <dt>date</dt>
+            <dd id="lbldate"></dd>
+            <dt>seats</dt>
+            <dd id="lblseats"></dd>
+        </dl>
+    </div>
+    <button class="btn btn-link" onclick="modifyclick()" data-bs-target="#booking" data-bs-toggle="modal">modify booking</button>
+
+    </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
